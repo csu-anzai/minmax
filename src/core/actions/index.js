@@ -58,3 +58,10 @@ export const decrementWeight = (modifier) => {
     modifier
   }
 }
+
+export const toggleMeasureUnit = (unit) => {
+  return {
+    type: 'TOGGLE_MEASURE_UNIT',
+    unit
+  }
+}
