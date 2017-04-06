@@ -12,6 +12,13 @@ export const removeWorkout = (id) => {
   }
 }
 
+export const selectWorkout = (id) => {
+  return {
+    type: 'SELECT_WORKOUT',
+    id
+  }
+}
+
 export const addExercise = (exercise) => {
   return {
     type: 'ADD_EXERCISE',
@@ -26,14 +33,28 @@ export const removeExercise = (id) => {
   }
 }
 
-export const addRep = () => {
+export const incrementReps = () => {
   return {
-    type: 'ADD_REP'
+    type: 'INCREMENT_REP'
   }
 }
 
-export const removeRep = () => {
+export const decrementRep = () => {
   return {
-    type: 'REMOVE_REP'
+    type: 'DECREMENT_REP'
+  }
+}
+
+export const incrementWeight = (modifier) => {
+  return {
+    type: 'INCREMENT_WEIGHT',
+    modifier
+  }
+}
+
+export const decrementWeight = (modifier) => {
+  return {
+    type: 'DECREMENT_REP',
+    modifier
   }
 }
