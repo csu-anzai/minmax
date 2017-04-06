@@ -65,3 +65,10 @@ export const toggleMeasureUnit = (unit) => {
     unit
   }
 }
+
+export const trackDistance = (distance) => {
+  return {
+    type: 'TRACK_DISTANCE',
+    distance
+  }
+}
