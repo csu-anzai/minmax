@@ -1,5 +1,4 @@
 {
-  "exercises" : {
     "abcrunchmachine" : {
       "id" : 1,
       "name" : "Ab Crunch Machine",
@@ -4353,5 +4352,4 @@
       "name" : "Zottman Preacher Curl",
       "muscles-group" : "biceps",
     }
-  }
 }
