@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MailChimp from './MailChimp'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+      <section className="App">
+        <div className="App-Container">
+          <div className="info">
+            <h1>MinMaxFit</h1>
+            <p>Launching soon, MinMaxFit brings a new edge to your love of the game. With smart technology and tailored athletic systems, the way you train will never be the same.</p>
+            <p>Subscribe below with email and follow us on your favorite social media account to follow our progress and community updates.</p>
+            <div className="emailContainer">
+              <MailChimp />
+            </div>
+          </div>
+          <nav className="sociallinks">
+            <a href="https://twitter.com/minmaxfit">twitter</a>
+            <a href="https://www.facebook.com/minmaxfit/">facebook</a>
+            <a href="https://www.instagram.com/minmaxfit/">instagram</a>
+          </nav>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      </section>
     );
   }
 }

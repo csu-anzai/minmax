@@ -1,5 +1,41 @@
 .App {
   text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.App::before {
+  content: "Play To Win";
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+  font-size: 400px;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: .75;
+  color: #0008ff;
+  mix-blend-mode: saturation;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .App::before {
+    content: "Play To Win";
+    opacity: .75;
+  }
+}
+
+.App-Container {
+  width: 80%;
+  position: relative;
+  z-index: 10;
+  display: flex;
 }
 
 .App-logo {
@@ -18,7 +54,175 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+h1 {
+  -webkit-margin-after: 0;
+  -webkit-margin-before: 0;
+  font-family: "niveau-grotesk", helvetica, arial, sans-serif;
+  font-weight: 900;
+  font-size: 50px;
+  text-transform: uppercase;
+  padding: 60px 0 0px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 21px;
+  text-align: left;
+  padding: 0 45px 1px;
+}
+
+a {
+  font-weight: 800;
+}
+
+.info {
+  border: 15px solid #f4ff40;
+  color: white;
+  width: 390px;
+}
+
+.emailContainer {
+  background: #3445ff;
+  margin-top: 50px;
+}
+
+#mc_embed_signup{
+  background:#3445ff;
+}
+
+#mc_embed_signup form {
+  padding: 0;
+  background:#3445ff;
+}
+
+#mc_embed_signup input.email {
+  border: none;
+  background:#3445ff;
+  text-align: center;
+  color: white;
+  outline: none;
+  font-family: "proxima-nova", helvetica, arial, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  text-transform: uppercase;
+  height: 60px;
+  line-height: 60px;
+}
+
+/*
+
+* broken apart due to browsers ignoring
+  entire stack if one value is invalid
+
+*/
+#mc_embed_signup input.email::-webkit-input-placeholder{
+  color: rgba(255,255,255,0.25);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#mc_embed_signup input.email::-moz-placeholder{
+  color: rgba(255,255,255,0.25);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#mc_embed_signup input.email:-ms-input-placeholder{
+  color: rgba(255,255,255,0.25);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+#mc_embed_signup input.email:-moz-placeholder {
+  color: rgba(255,255,255,0.25);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+#mc_embed_signup input.button {
+    background: #f4ff40;
+    color: #212935;
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    border: none;
+    border-radius: 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    height: 60px;
+    line-height: 60px;
+    font-size: 16px;
+}
+
+#mc_embed_signup input.button:hover {
+  background: white;
+  transition: none;
+}
+
+.custom-email {
+  display: flex;
+  display: row;
+  padding: 0;
+}
+
+.sociallinks {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+
+.sociallinks a {
+  height: 60px;
+  width: 142px;
+  line-height: 60px;
+  display: block;
+  background: #3459ff;
+  text-decoration: none;
+  color: #212935;
+  text-transform: uppercase;
+}
+
+.sociallinks a:nth-child(2){
+  background-color: #344fff;
+}
+
+.sociallinks a:nth-child(3){
+  background-color: #3445ff;
+}
+
+.sociallinks a:hover{
+  background: white;
+}
+
+@media screen
+  and (max-width: 850px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .App-Container {
+      width: 95%;
+      flex-direction: column;
+    }
+
+    .info {
+      width: auto;
+      flex: 1;
+    }
+
+    .App {
+     align-items: flex-start;
+     margin-top: 15px;
+    }
+
+    .custom-email {
+      flex-direction: column;
+
+    }
+
+    #mc_embed_signup input.email {
+      width: 100%;
+    }
+
+    #mc_embed_signup input.button {
+      width: 95%;
+      margin: 0 auto;
+      margin-bottom: 2.5%;
+    }
+
+
 }
