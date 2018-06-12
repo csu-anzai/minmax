@@ -98,6 +98,11 @@ body, html {
   height: 100%;
   display: grid;
   background: #382154;
+  background: rgb(62,39,90);
+background: -moz-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+background: radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e275a",endColorstr="#361f53",GradientType=1);
 }
 main {
   margin: 8% auto auto 10%;
