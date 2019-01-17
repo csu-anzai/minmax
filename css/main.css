@@ -8,7 +8,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
@@ -97,27 +97,31 @@ textarea {
 body, html {
   height: 100%;
   display: grid;
+  background: #382154;
+  background: rgb(62,39,90);
+background: -moz-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+background: radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e275a",endColorstr="#361f53",GradientType=1);
 }
 main {
   margin: 8% auto auto 10%;
   display: grid;
-  grid-template-rows: auto 65px auto 65px 65px 65px;
+  grid-template-rows: auto 65px auto 115px 115px 65px;
 }
 
-h1{
-  color: #f24342;
-  font-size: 28px;
-  font-family: "ratio-display", helvetica, sans-serif;
-  text-transform: uppercase;
+.logo{
+
   margin: 0;
   padding: 0;
 
   grid-row-start: 1;
-  grid-row-end: 1;
+  grid-row-end: 2;
+  width: 25%;
 }
 
 h2, h3, a, p, span {
-  color: #58524d;
+  color: #f8f5de;
   font-family: "din-2014", helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -150,31 +154,35 @@ ol {
   display: grid;
 
   list-style: none;
-  padding: 0;
+  padding: 0 0 0 0;
   margin: 0;
 
   grid-row-start: 5;
   grid-row-end: 5;
 
-  grid-template-rows: 65px;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 115px;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap: 2%;
 }
 
 li {
   position: relative;
 }
 
-li:after {
+li .icon {
   content: "";
   position: absolute;
-  height: 7px;
-  width: 40px;
-  background: #42f1f2;
+  height: 60px;
+  width: 60px;
   left: 0;
-  bottom: 0;
+  top: -70px;
 }
 
 p {
+
+}
+
+p.copy {
   grid-row-start: 6;
   grid-row-end: 6;
   align-self: end;
@@ -276,19 +284,40 @@ p {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 890px) {
+
+  h2 span {
+    display: inline;
+  }
+
+}
 
 @media only screen and (max-width: 830px) {
     /* Style adjustments for viewports that meet the condition */
     main {
       margin: 5% auto auto auto;
-      grid-template-rows: auto 65px auto 65px auto 30px auto;
+      grid-template-rows: auto 65px auto 20px auto 60px auto;
+    }
+    .logo {
+      margin: 0;
+      padding: 0;
+
+      grid-row-start: 1;
+      grid-row-end: 2;
+      width: 50%;
     }
     h2 {
       font-size: 28px
     }
+
+
     ol {
-      grid-template-rows: 4em 20px 4em 20px 4em 20px 4em 20px;
+      grid-template-rows: auto 20px auto 20px auto 20px auto 20px;
       grid-template-columns: 100%;
+    }
+
+    ol li {
+      margin-top: 90px;
     }
 
     ol li:nth-child(1){
@@ -321,8 +350,9 @@ p {
   h1 {
     font-size: 24px;
   }
-  span {
+  h2 span {
     font-size: 18px;
+    display: block;
   }
 }
 
