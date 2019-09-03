@@ -263,9 +263,9 @@ label[for="mce-EMAIL"]{
 #training {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 0;
+  padding: 3px 0;
 }
 
 #training .logo {
@@ -291,6 +291,7 @@ label[for="mce-EMAIL"]{
 #training section {
   flex: 1;
   height: 100vh;
+  min-height: 720px;
   align-items: flex-start;
   justify-content: space-between;
   display: flex;
@@ -301,14 +302,56 @@ label[for="mce-EMAIL"]{
 
 #training section.training-description {
   background: white;
-  height: 50vh;
   border-radius: 15px;
   height: 99%;
   margin-right: .5%;
+  padding: 0 0 20px 0;
+}
+
+#training section.training-description p {
+  color: #190E2B;
+}
+
+#training section.training-description p.fineprint {
+  color: #6B6A67;
+  font-size: .85rem;
+  font-weight: 400;
+  margin: 20px auto;
+}
+
+.cardcontent {
+  width: 85%;
+  margin: 0 auto;
+  font-family: interstate-condensed, sans-serif;
+  text-align: left;
+}
+
+.cardcontent h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 2rem;
+  margin-bottom: 10px
+}
+
+.cardcontent h3 {
+  margin-bottom: 10px;
+
+}
+
+.cardcontent ol {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  display: block;
+  list-style: none;
 }
 
 #lead-in span {
-  background: red;
+  background: #EE41F8;
   padding: 2px;
 }
 
@@ -321,9 +364,52 @@ label[for="mce-EMAIL"]{
   width: 100%;
 }
 
+.payment {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0;
+  border-top: 1px solid #FFB412;
+}
 
+.payment div {
+  flex: 2;
+  text-align: left;
+}
 
+.payment form {
+  flex: 1
+}
 
+.payment h4 {
+  font-family: interstate-condensed, sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background: #FFB412;
+  color: black;
+  font-family: interstate-condensed, sans-serif;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+header div > div {
+  margin-left: 10px;
+}
+
+#clock {
+  display: flex;
+  flex-direction: row;
+}
 
 
 
@@ -412,36 +498,23 @@ label[for="mce-EMAIL"]{
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (max-width: 890px) {
+@media only screen and (max-width: 1050px) {
 
-  h2 span {
-    display: inline;
+  #training {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  #training section.training-description {
+    margin: 5px;
   }
 
 }
 
 @media only screen and (max-width: 830px) {
     /* Style adjustments for viewports that meet the condition */
-    main {
-      margin: 5% auto auto auto;
-    }
-    .logo {
-      margin: 0;
-      padding: 0;
-      width: 50%;
-    }
-    h1 {
-      font-size: 3rem;
-      max-width: 90%;
-      margin: 20px auto;
-      line-height: 3rem;
-    }
-    p {
-      width: 90%;
-    }
-    .mc-field-group {
-      width: 90%;
-    }
+    
 }
 
 @media only screen and (max-width: 600px) {
