@@ -263,14 +263,14 @@ label[for="mce-EMAIL"]{
 #training {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 3px 0;
 }
 
 #training .logo {
   width: 30%;
-  margin: 0;
+  margin: 0 0 80px 0;
 }
 
 #training h1, #training p {
@@ -284,14 +284,18 @@ label[for="mce-EMAIL"]{
   margin-bottom: 25px;
 }
 
+#training h1 ~ p {
+  margin-bottom: 100px;
+}
+
 #training p {
   width: 85%;
 }
 
 #training section {
   flex: 1;
-  height: 100vh;
-  min-height: 720px;
+  /* height: 100vh; */
+  /* min-height: 100vh; */
   align-items: flex-start;
   justify-content: space-between;
   display: flex;
@@ -303,7 +307,7 @@ label[for="mce-EMAIL"]{
 #training section.training-description {
   background: white;
   border-radius: 15px;
-  height: 99%;
+  /* height: 99%; */
   margin-right: .5%;
   padding: 0 0 20px 0;
 }
@@ -509,8 +513,7 @@ header div > div {
 
   #training section.training-description {
     margin: 5px;
-    height: auto;
-    min-height: auto;
+    /* height: auto; */
   }
 
   .cardcontent h2 {
