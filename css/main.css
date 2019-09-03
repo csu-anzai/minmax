@@ -95,34 +95,54 @@ textarea {
    ========================================================================== */
 
 body, html {
-  height: 100%;
+  min-height: 100vh;
   display: grid;
   background: #382154;
   background: rgb(62,39,90);
-background: -moz-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
-background: -webkit-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
-background: radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(54,31,83,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e275a",endColorstr="#361f53",GradientType=1);
+  background: -moz-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(44,31,83,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(44,31,83,1) 100%);
+  background: radial-gradient(circle, rgba(62,39,90,1) 0%, rgba(44,31,83,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3e275a",endColorstr="#361f53",GradientType=1);
+  margin: 0;
 }
 main {
-  margin: 8% auto auto 10%;
+  /* margin: 100px auto 0 0;
   display: grid;
-  grid-template-rows: auto 65px auto 115px 115px 65px;
+  grid-template-rows: auto 25px auto 115px 115px 65px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .logo{
 
-  margin: 0;
+  margin: 20px auto 0;
   padding: 0;
 
   grid-row-start: 1;
   grid-row-end: 2;
-  width: 25%;
+  width: 15%;
+}
+
+h1 {
+  font-family: interstate-condensed, sans-serif;
+  font-weight: 800;
+  color: white;
+  font-size: 3rem;
+  text-transform: capitalize;
 }
 
 h2, h3, a, p, span {
-  color: #f8f5de;
-  font-family: "din-2014", helvetica, sans-serif;
+  font-family: interstate, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -142,55 +162,113 @@ h3 {
 }
 
 a, p {
-  font-size: 14px;
+  font-size: 1rem;
+  font-weight: 700;
   text-decoration: none;
+  width: 60%;
+  margin: 0 auto 20px;
 }
 
-span {
+a {
+  background: white;
+  color: rgb(62,39,90);
+  padding: 20px;
+  border-radius: 100px;
+  margin-top: 50px;
   display: block;
-}
-
-ol {
-  display: grid;
-
-  list-style: none;
-  padding: 0 0 0 0;
-  margin: 0;
-
-  grid-row-start: 5;
-  grid-row-end: 5;
-
-  grid-template-rows: 115px;
-  grid-template-columns: 20% 20% 20% 20%;
-  grid-column-gap: 2%;
-}
-
-li {
-  position: relative;
-}
-
-li .icon {
-  content: "";
-  position: absolute;
-  height: 60px;
-  width: 60px;
-  left: 0;
-  top: -70px;
+  max-width: 400px;
 }
 
 p {
-
+  color: white;
 }
 
 p.copy {
-  grid-row-start: 6;
-  grid-row-end: 6;
-  align-self: end;
+  font-size: .75rem;
+  margin-top: 40px;
 }
 
+p.copy a {
+  background: transparent;
+  height: auto;
+  width: auto;
+  padding: 0;
+  color: #EE41F8;
+  display: inline;
+  font-size: .75rem;
+}
 
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
 
+canvas {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 0;
+}
 
+.mc-field-group {
+  background: white;
+  color: rgb(62,39,90);
+  padding: 15px 20px;
+  border-radius: 100px;
+  margin-top: 50px;
+  display: block;
+  margin: 0 auto;
+  font-family: interstate, sans-serif;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.mc-field-group input {
+  height: 20px;
+  font-family: interstate, sans-serif;
+}
+
+.mc-field-group input[type="email"] {
+  flex-grow: 3;
+  padding: .5rem .25rem;
+  font-size: 1rem;
+  border: none;
+}
+
+.mc-field-group input[type="submit"] {
+  flex-shrink: 1;
+  display: block;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: transparent;
+  text-transform: uppercase;
+
+}
+
+#mc_embed_signup_scroll {
+  /* display: flex;
+  flex-direction: row; */
+}
+
+label[for="mce-EMAIL"]{
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-family: interstate, sans-serif;
+  padding-bottom: 20px;
+  display: block;
+}
+
+#subscribe-result {
+  margin-top: 10px;
+}
 
 
 
