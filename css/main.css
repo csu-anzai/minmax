@@ -270,6 +270,23 @@ label[for="mce-EMAIL"]{
   margin-top: 10px;
 }
 
+#training {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#training section {
+  flex: 1;
+}
+
+.training-description {
+  background: white;
+  height: 50vh;
+  border-radius: 15px;
+  height: 99%;
+}
 
 
 

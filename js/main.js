@@ -87,7 +87,7 @@ function () {
     value: function reset() {
       this.lastChanged = performance.now();
       this.hue = random(130) + 180;
-      this.pos = createVector(0, 100);
+      this.pos = createVector(-25, 100);
       this.vel = createVector(2, 0);
       this.pickDirection([-2, -1, 0, 1, 2, 3]);
     }
