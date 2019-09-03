@@ -169,16 +169,6 @@ a, p {
   margin: 0 auto 20px;
 }
 
-a {
-  background: white;
-  color: rgb(62,39,90);
-  padding: 20px;
-  border-radius: 100px;
-  margin-top: 50px;
-  display: block;
-  max-width: 400px;
-}
-
 p {
   color: white;
 }
@@ -275,17 +265,60 @@ label[for="mce-EMAIL"]{
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding: 0;
+}
+
+#training .logo {
+  width: 30%;
+  margin: 0;
+}
+
+#training h1, #training p {
+  margin: 0;
+  text-align: left;
+}
+
+#training h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+  margin-bottom: 25px;
+}
+
+#training p {
+  width: 85%;
 }
 
 #training section {
   flex: 1;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 2rem 20px;
+  box-sizing: border-box;
 }
 
-.training-description {
+#training section.training-description {
   background: white;
   height: 50vh;
   border-radius: 15px;
   height: 99%;
+  margin-right: .5%;
+}
+
+#lead-in span {
+  background: red;
+  padding: 2px;
+}
+
+.logolink {
+  background: none;
+  padding: 0;
+  display: block;
+  text-align: left;
+  margin: 0;
+  width: 100%;
 }
 
 
