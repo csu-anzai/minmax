@@ -382,8 +382,14 @@ label[for="mce-EMAIL"]{
     }
     h1 {
       font-size: 3rem;
+      max-width: 90%;
+      margin: 20px auto;
+      line-height: 3rem;
     }
     p {
+      width: 90%;
+    }
+    .mc-field-group {
       width: 90%;
     }
 }
