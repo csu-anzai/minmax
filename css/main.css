@@ -301,14 +301,25 @@ label[for="mce-EMAIL"]{
 
 #training section.training-description {
   background: white;
-  height: 50vh;
   border-radius: 15px;
   height: 99%;
   margin-right: .5%;
+  padding: 0 0 20px 0;
+}
+
+#training section.training-description p {
+  color: #190E2B;
+}
+
+#training section.training-description p.fineprint {
+  color: #6B6A67;
+  font-size: .85rem;
+  font-weight: 400;
+  margin: 20px auto;
 }
 
 #lead-in span {
-  background: red;
+  background: #EE41F8;
   padding: 2px;
 }
 
@@ -321,9 +332,33 @@ label[for="mce-EMAIL"]{
   width: 100%;
 }
 
+.center {
+  text-align: center;
+  width: 100%;
+}
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background: #FFB412;
+  color: black;
+  font-family: interstate-condensed, sans-serif;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 15px;
+  box-sizing: border-box;
+}
 
+header div > div {
+  margin-left: 10px;
+}
 
+#clock {
+  display: flex;
+  flex-direction: row;
+}
 
 
 

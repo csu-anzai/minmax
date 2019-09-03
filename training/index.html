@@ -31,13 +31,24 @@
       </a>
       <div id="lead-in">
         <h1>September 2019 Introductory Online Training Special</h1>
-        <p>For only the month of September 2019: All training packages and online-coaching sessions are <span>on sale for $75.</span></p>
+        <p>Only available September 2019: 3-month online-coaching sessions <span>on sale for $75.</span> Offer ends September 30, 2019.</p>
       </div>
 
       <p class="copy">Made with 💪and 🧠 by <a href="https://twitter.com/bybrandonbrown" title="Brandon on twitter">Brandon Brown</a> in Orlando, Florida</p>
     </section>
     <section class="training-description">
 
+      <header>Offer only available for: <div id="clock"></div></header>
+
+      <div class="center">
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="Z8SXV96242LVQ">
+          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <p class="fineprint">Upon purchase of these services, each client will be interviewed for training orientation, goal alignment, and overall fit with the trainer. If any of these are seen as incompatible or otherwise problematic by the trainer, you will receive a full refund of any payment received.</p>
+      </div>
     </section>
 
   </main>
@@ -47,6 +58,53 @@
 
   <script src="../js/plugins.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+  window.onload = function(e){
+
+    var $clock = $('#clock'),
+        eventTime = moment('30-09-2019 23:59:59', 'DD-MM-YYYY HH:mm:ss').unix(),
+        currentTime = moment().unix(),
+        diffTime = eventTime - currentTime,
+        duration = moment.duration(diffTime * 1000, 'milliseconds'),
+        interval = 1000;
+
+        console.log("eventTime: ", eventTime)
+    // if time to countdown
+    if(diffTime > 0) {
+
+        // Show clock
+        // $clock.show();
+
+        var $d = $(' <div class="days" ></div>').appendTo($clock),
+            $h = $(' <div class="hours" ></div>').appendTo($clock),
+            $m = $(' <div class="minutes" ></div>').appendTo($clock),
+            $s = $(' <div class="seconds" ></div>').appendTo($clock);
+
+        setInterval(function(){
+
+            duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
+            var d = moment.duration(duration).days(),
+                h = moment.duration(duration).hours(),
+                m = moment.duration(duration).minutes(),
+                s = moment.duration(duration).seconds();
+
+            d = $.trim(d).length === 1 ? '0' + d : d;
+            h = $.trim(h).length === 1 ? '0' + h : h;
+            m = $.trim(m).length === 1 ? '0' + m : m;
+            s = $.trim(s).length === 1 ? '0' + s : s;
+
+            // show how many hours, minutes and seconds are left
+            $d.text(d + ' Days');
+            $h.text(h + ' Hours');
+            $m.text(m + ' Minutes');
+            $s.text(s + ' Seconds');
+
+        }, interval);
+
+    }
+
+};
+</script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120199247-1"></script>
