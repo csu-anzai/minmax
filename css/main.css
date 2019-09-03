@@ -510,6 +510,11 @@ header div > div {
   #training section.training-description {
     margin: 5px;
     height: auto;
+    min-height: auto;
+  }
+
+  .cardcontent h2 {
+    margin-top: 20px;
   }
 
 }
