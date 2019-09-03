@@ -334,7 +334,8 @@ label[for="mce-EMAIL"]{
   font-size: 1.5rem;
   font-weight: 800;
   line-height: 2rem;
-  margin-bottom: 10px
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .cardcontent h3 {
@@ -518,10 +519,6 @@ header div > div {
   #training section.training-description {
     margin: 5px;
     /* height: auto; */
-  }
-
-  .cardcontent h2 {
-    margin-top: 20px;
   }
 
 }
