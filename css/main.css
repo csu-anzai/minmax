@@ -504,6 +504,10 @@ header div > div {
    ========================================================================== */
 @media only screen and (max-width: 1050px) {
 
+  main {
+    position: relative;
+  }
+
   #training {
     flex-direction: column;
     align-items: flex-start;
